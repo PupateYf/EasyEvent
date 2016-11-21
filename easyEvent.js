@@ -24,8 +24,7 @@ EasyEvent.prototype.on = function(eventType, handle){
 
 EasyEvent.prototype.emit = function(event, data){
 	if(!this.handleTree[event]) return;
-	var handlers = this.handleTree[event],
-		argArr = Array.prototype.slice.call(arguments).slice(1);
+	var handlers = this.handleTree[event];
 	setTimeout(function(){
 		for(var i = 0; i < handlers.length; i++){
 			handlers[i](data)
