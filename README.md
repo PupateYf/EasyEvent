@@ -18,3 +18,8 @@ Finally, trigger your event.
 ```js
     emitter.emit('your-event', {data : 'test'});
 ```
+
+Remove event.
+```js
+    emitter.off('your-event');
+```

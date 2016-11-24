@@ -31,3 +31,8 @@ EasyEvent.prototype.emit = function(event, data){
 		}
 	},0)
 }
+
+EasyEvent.prototype.off = function(event){
+	if(!this.handleTree[event]) return;
+	delete this.handleTree[event];
+}
