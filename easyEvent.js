@@ -1,5 +1,5 @@
 /*
- * @author Jatfung Yang
+ * @author Yatfung Yueng
  * @description A simple implementation of custom event
  */
 
