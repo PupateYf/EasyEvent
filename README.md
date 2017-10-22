@@ -14,6 +14,14 @@ Then bind your event.
     emitter.on('your-event', callback);
 ```
 
+```js
+    function callback(data){
+        console.log('the data is', data);
+    }
+    // bind with once
+    emitter.once('your-event', callback);
+```
+
 Finally, trigger your event.
 ```js
     emitter.emit('your-event', {data : 'test'});
