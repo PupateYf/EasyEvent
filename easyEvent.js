@@ -24,7 +24,7 @@ EasyEvent.prototype.on = function (eventType, handle) {
 
 EasyEvent.prototype.once = function (eventType, handle) {
     var onceFn = function(){
-        this.off(eventType)
+        this.off(eventType, onceFn)
         handle.apply(arguments)
     }
     this.on(eventType, onceFn)
